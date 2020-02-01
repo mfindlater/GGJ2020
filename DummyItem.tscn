@@ -23,9 +23,12 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Area" type="Area" parent="."]
+collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 0.747897, 0, 0, 0, 0.747897, 0, 0, 0, 0.747897, 0, 0, 0 )
 shape = SubResource( 3 )
+
+[node name="Track" type="AudioStreamPlayer" parent="."]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

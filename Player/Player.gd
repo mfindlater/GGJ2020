@@ -24,29 +24,29 @@ func _process(delta):
 		velocity.x -= 1
 	
 	if Input.is_action_pressed("ui_up"):
-		$GameJamBoyo.rotation = Vector3.ZERO
+		$Model.rotation = Vector3.ZERO
 	
 	if  Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(45),0)
+		$Model.rotation = Vector3(0,deg2rad(45),0)
 	
 	if  Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(-45),0)
+		$Model.rotation = Vector3(0,deg2rad(-45),0)
 	
 	if  Input.is_action_pressed("ui_down"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(-180),0)
+		$Model.rotation = Vector3(0,deg2rad(-180),0)
 		
 	if  Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_left"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(135),0)
+		$Model.rotation = Vector3(0,deg2rad(135),0)
 	
 	if  Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_right"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(-135),0)
+		$Model.rotation = Vector3(0,deg2rad(-135),0)
 	
 	if Input.is_action_pressed("ui_left"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(90),0)
+		$Model.rotation = Vector3(0,deg2rad(90),0)
 		
 	
 	if Input.is_action_pressed("ui_right"):
-		$GameJamBoyo.rotation = Vector3(0,deg2rad(-90),0)
+		$Model.rotation = Vector3(0,deg2rad(-90),0)
 		$ItemPosition.global_transform.translated(Vector3(0,deg2rad(-90),0))
 	
 	if Input.is_action_pressed("ui_left"):
@@ -58,14 +58,14 @@ func _process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		if holding_item:
-			$GameJamBoyo/AnimationPlayer.current_animation = "CarryWalkLoop"
+			$Model/AnimationPlayer.current_animation = "CarryWalkLoop"
 		else:	
-			$GameJamBoyo/AnimationPlayer.current_animation = "WalkLoop"
+			$Model/AnimationPlayer.current_animation = "WalkLoop"
 	else:
 		if holding_item:
-			$GameJamBoyo/AnimationPlayer.current_animation = "CarryIdleLoop"
+			$Model/AnimationPlayer.current_animation = "CarryIdleLoop"
 		else:
-			$GameJamBoyo/AnimationPlayer.current_animation = "IdleLoop"
+			$Model/AnimationPlayer.current_animation = "IdleLoop"
 	
 	if Input.is_action_just_pressed("ui_accept") and can_pick_up and not holding_item:
 		emit_signal("pick_up")

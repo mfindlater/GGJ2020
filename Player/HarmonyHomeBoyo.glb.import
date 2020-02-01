@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/GameJamBoyo.glb-61daeb05110929840aae702009833007.scn"
+path="res://.import/HarmonyHomeBoyo.glb-39f5ab6099e2c8d8a9cd2338e7ce75bd.scn"
 
 [deps]
 
-source_file="res://Player/GameJamBoyo.glb"
-dest_files=[ "res://.import/GameJamBoyo.glb-61daeb05110929840aae702009833007.scn" ]
+source_file="res://Player/HarmonyHomeBoyo.glb"
+dest_files=[ "res://.import/HarmonyHomeBoyo.glb-39f5ab6099e2c8d8a9cd2338e7ce75bd.scn" ]
 
 [params]
 
