@@ -36,8 +36,6 @@ shape = SubResource( 4 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0544545, 2.13803, -0.157942 )
 
-[node name="Fade" type="Tween" parent="."]
-
 [node name="BusBox" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1847, 1.41406, 0 )
 
