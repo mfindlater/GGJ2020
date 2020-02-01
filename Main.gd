@@ -25,3 +25,6 @@ func _on_Player_pick_up():
 	$Player/ItemPosition.add_child($DummyItem)
 	
 
+func _on_Player_put_down():
+	$Player/ItemPosition.remove_child($DummyItem)
+	$DummyItem.translate(Vector3(0,-3,0))
