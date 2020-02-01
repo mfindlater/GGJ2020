@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MeshInstance.gd" type="Script" id=2]
-[ext_resource path="res://DummyItem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://BusBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Item/Item.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -36,14 +36,14 @@ shape = SubResource( 4 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0544545, 2.13803, -0.157942 )
 
-[node name="DummyItem" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.814, 1.52873, 0 )
-
 [node name="Fade" type="Tween" parent="."]
 
 [node name="BusBox" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1847, 1.41406, 0 )
+
+[node name="Item" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78715, 1.50807, 1.64861 )
 [connection signal="pick_up" from="Player" to="." method="_on_Player_pick_up"]
 [connection signal="put_down" from="Player" to="." method="_on_Player_put_down"]
-[connection signal="item_enter" from="DummyItem" to="." method="_on_DummyItem_item_enter"]
-[connection signal="item_exit" from="DummyItem" to="." method="_on_DummyItem_item_exit"]
+[connection signal="item_enter" from="Item" to="." method="_on_Item_item_enter"]
+[connection signal="item_exit" from="Item" to="." method="_on_Item_item_exit"]

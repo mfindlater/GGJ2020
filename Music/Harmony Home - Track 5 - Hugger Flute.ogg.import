@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Harmony Home - Track 5 - Hugger Flute.ogg-052fbad889cc133533955b8825b15e72.oggstr"
+
+[deps]
+
+source_file="res://Music/Harmony Home - Track 5 - Hugger Flute.ogg"
+dest_files=[ "res://.import/Harmony Home - Track 5 - Hugger Flute.ogg-052fbad889cc133533955b8825b15e72.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Harmony Home - Track 3 - Nerd Strings.ogg-5357aeeff2593046a4b72a473fb32e11.oggstr"
+
+[deps]
+
+source_file="res://Music/Harmony Home - Track 3 - Nerd Strings.ogg"
+dest_files=[ "res://.import/Harmony Home - Track 3 - Nerd Strings.ogg-5357aeeff2593046a4b72a473fb32e11.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

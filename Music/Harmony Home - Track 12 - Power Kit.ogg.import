@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Harmony Home - Track 12 - Power Kit.ogg-0b37bc25d9124f8aeaada405f4c6b2d2.oggstr"
+
+[deps]
+
+source_file="res://Music/Harmony Home - Track 12 - Power Kit.ogg"
+dest_files=[ "res://.import/Harmony Home - Track 12 - Power Kit.ogg-0b37bc25d9124f8aeaada405f4c6b2d2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
