@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/GameJamBoyo.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 2.17147
+
+[node name="Player" type="KinematicBody"]
+collision_mask = 0
+script = ExtResource( 1 )
+speed = 20
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 2.11753, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 8.14603e-08, -1.41093e-07, -5, 5, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GameJamBoyo" parent="." instance=ExtResource( 2 )]
+
+[node name="ItemPosition" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06971, 0.95801, 0 )

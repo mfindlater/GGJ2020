@@ -9,8 +9,8 @@ extends MeshInstance
 func _ready():
 	var material = SpatialMaterial.new()
 	material = get_surface_material(0)
-	#material.albedo_color = Color(1,0,0)
-	#material.set_surface_material(0,material)
+	material.albedo_color = Color(1,0,0)
+	set_surface_material(0,material)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

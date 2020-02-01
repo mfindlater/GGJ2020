@@ -1,19 +1,31 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MeshInstance.gd" type="Script" id=2]
+[ext_resource path="res://DummyItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="SpatialMaterial" id=2]
 
-[node name="Spatial" type="Spatial"]
+[node name="Main" type="Spatial"]
+script = ExtResource( 4 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 9.77524e-07, 3.25841e-07, 20, 0, 1, -6.51683e-06, 6, -5.30863e-14, -3.25841e-06, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038218, 2.01034, 0.0247149 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0544545, 2.13803, -0.157942 )
+
+[node name="DummyItem" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81415, 1.62187, 0 )
+[connection signal="pick_up" from="Player" to="." method="_on_Player_pick_up"]
+[connection signal="item_enter" from="DummyItem" to="." method="_on_DummyItem_item_enter"]
+[connection signal="item_exit" from="DummyItem" to="." method="_on_DummyItem_item_exit"]
