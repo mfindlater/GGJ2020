@@ -8,7 +8,6 @@
 [sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 1, 1, 1.34431 )
 
 [node name="Item" type="KinematicBody"]
 collision_mask = 0

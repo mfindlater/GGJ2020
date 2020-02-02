@@ -10,21 +10,19 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_BusBox_area_entered(area):
-	print(area.get_parent().name)
-	
-	var item = area.get_parent()
-	
-	var track = item.get_node("Track")
-	
-	last_bus = track.bus
-	
-	track.bus = bus_name
+	pass
+	#print(area.get_parent().name + "from box")
+
+	#var item = area.get_parent()	
+	#var track = item.get_node("Track")
+	#last_bus = track.bus
+	#track.bus = bus_name
 	
 
 
 func _on_BusBox_area_exited(area):
-		
-	var item = area.get_parent()
-	var track = item.get_node("Track")
+	pass
+	#var item = area.get_parent()
+	#var track = item.get_node("Track")
 	
 	

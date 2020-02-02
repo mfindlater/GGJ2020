@@ -9,9 +9,10 @@ var holding_item = false
 
 export var speed = 100
 
-func _process(delta):
 
 	
+
+func _process(delta):
 	var velocity = Vector3()
 	if Input.is_action_pressed("ui_up"):
 		velocity.x += 1
@@ -66,8 +67,8 @@ func _process(delta):
 		emit_signal("pick_up")
 		holding_item = true
 		can_pick_up = false
-		
 		print("Pick Up")
+		
 	elif Input.is_action_just_pressed("ui_accept") and holding_item:
 		emit_signal("put_down")
 		holding_item = false

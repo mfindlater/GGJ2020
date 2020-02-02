@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Music/HarmonyHome - Track 5 - Hugger Flute.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Music/HarmonyHome - Track 4 - Hugger Percussion.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Item/Item.tscn" type="PackedScene" id=2]
 
 [node name="Item" instance=ExtResource( 2 )]

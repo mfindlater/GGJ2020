@@ -17,17 +17,20 @@ func _ready():
 	
 	player.connect("pick_up", self,"_on_Item_picked_up")
 	
-	add_to_group("items")
-	
+	yield(get_tree().create_timer(0.5,false),"timeout")
+	can_be_picked_up = false
+	emit_signal("item_exit")
 
 func _on_Area_body_entered(body):
 	emit_signal("item_enter")
 	can_be_picked_up = true
+	print("entered")
 
 	
 func _on_Area_body_exited(body):
 	emit_signal("item_exit")
 	can_be_picked_up = false
+	print("exited")
 	
 func _on_Item_picked_up():
 	if can_be_picked_up:

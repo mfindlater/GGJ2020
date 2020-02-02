@@ -12,7 +12,7 @@ script = ExtResource( 1 )
 speed = 20
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 2.11753, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1.06381, 0 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
