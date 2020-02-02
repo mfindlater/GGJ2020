@@ -1,15 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://LoadGame.gd" type="Script" id=1]
+[ext_resource path="res://Title Screen.png" type="Texture" id=2]
 [ext_resource path="res://Music Magic Personal Use.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Music/menu.wav" type="AudioStream" id=4]
 [ext_resource path="res://MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://Montserrat-Medium.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.27451, 0.176471, 0.176471, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
 
 [sub_resource type="DynamicFont" id=1]
-size = 60
+size = 70
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
 
@@ -54,25 +63,27 @@ transform = Transform2D( 155.356, 0, 0, 159.97, 0, 0 )
 script = ExtResource( 5 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 0.00104293
-margin_top = 0.00586173
-margin_right = 6.58104
-margin_bottom = 3.77686
-rect_scale = Vector2( 1, 0.99825 )
+margin_left = -1.0
+margin_right = 2839.0
+margin_bottom = 1866.0
+rect_scale = Vector2( 0.003, 0.002 )
+texture = ExtResource( 2 )
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Start" type="Button" parent="."]
-anchor_left = 0.00193928
-anchor_top = 6.57143e-05
-anchor_right = 0.00193928
-anchor_bottom = 6.57145e-05
-margin_left = 1.00766
+anchor_left = 0.00367025
+anchor_top = 0.00123688
+anchor_right = 0.16967
+anchor_bottom = 0.00123688
+margin_left = 1.0
 margin_top = 1.98584
-margin_right = 251.008
+margin_right = 200.0
 margin_bottom = 181.986
-rect_scale = Vector2( 0.006, 0.004 )
+rect_scale = Vector2( 0.004, 0.003 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 1 )
 text = "Start"
 script = ExtResource( 1 )
@@ -94,6 +105,7 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="Label"]
+visible = false
 margin_left = 141.0
 margin_top = 7.0
 margin_right = 866.455

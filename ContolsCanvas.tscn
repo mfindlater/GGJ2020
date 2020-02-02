@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://space.png" type="Texture" id=1]
 [ext_resource path="res://HideCanvas.gd" type="Script" id=2]
@@ -7,17 +7,24 @@
 [ext_resource path="res://keys.png" type="Texture" id=5]
 [ext_resource path="res://Montserrat-Medium.ttf" type="DynamicFontData" id=6]
 
-[sub_resource type="ImageTexture" id=2]
+[sub_resource type="ImageTexture" id=1]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 200
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 19
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.286275, 0.25098, 0.25098, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="DynamicFont" id=4]
 size = 35
 font_data = ExtResource( 6 )
 
@@ -27,7 +34,7 @@ font_data = ExtResource( 6 )
 modulate = Color( 0.00784314, 0.00392157, 0.00392157, 1 )
 margin_right = 1032.0
 margin_bottom = 603.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -42,7 +49,7 @@ margin_left = 200.0
 margin_right = 1221.0
 margin_bottom = 385.0
 rect_scale = Vector2( 0.838, 0.518 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
@@ -74,13 +81,16 @@ __meta__ = {
 }
 
 [node name="Instructions" type="Label" parent="."]
-margin_left = 458.714
-margin_top = 203.117
-margin_right = 1084.71
-margin_bottom = 554.117
-custom_fonts/font = SubResource( 4 )
+margin_left = 460.384
+margin_top = 221.489
+margin_right = 1086.38
+margin_bottom = 572.489
+custom_fonts/font = SubResource( 3 )
 text = "Pick up or put down 
 objects
+
+
+
 
 Move forward, backward,
 left and right"
@@ -89,11 +99,12 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 390.796
-margin_top = 481.679
-margin_right = 570.796
-margin_bottom = 556.679
-custom_fonts/font = SubResource( 5 )
+margin_left = 788.299
+margin_top = 469.988
+margin_right = 968.299
+margin_bottom = 544.988
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Start"
 script = ExtResource( 2 )
 __meta__ = {
