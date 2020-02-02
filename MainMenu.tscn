@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://LoadGame.gd" type="Script" id=1]
+[ext_resource path="res://Quit.gd" type="Script" id=2]
+[ext_resource path="res://Music Magic Personal Use.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://MainMenu.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Title"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.109, 0.128 ), Vector2( 0.06, 0.128 ), Vector2( 0.109, 0.128 ) ]
+}
+
+[node name="icon" type="CanvasLayer"]
+scale = Vector2( 155.356, 159.97 )
+transform = Transform2D( 155.356, 0, 0, 159.97, 0, 0 )
+script = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 0.00104293
+margin_top = 0.00586173
+margin_right = 6.58104
+margin_bottom = 3.81386
+rect_scale = Vector2( 1, 0.99825 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="."]
+anchor_left = -2.98172e-05
+anchor_right = -2.98172e-05
+margin_left = 1.00766
+margin_top = 1.98584
+margin_right = 251.008
+margin_bottom = 181.986
+rect_scale = Vector2( 0.006, 0.004 )
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 3.99103
+margin_top = 1.99994
+margin_right = 253.991
+margin_bottom = 182.0
+rect_scale = Vector2( 0.006, 0.004 )
+custom_fonts/font = SubResource( 2 )
+text = "Quit"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -6.86538
+margin_top = 0.463535
+margin_right = 64.1346
+margin_bottom = 14.4635
+rect_scale = Vector2( 0.0571061, 0.0473607 )
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Label"]
+margin_left = 141.0
+margin_top = 7.0
+margin_right = 866.455
+margin_bottom = 200.028
+rect_scale = Vector2( 0.109, 0.128 )
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 4 )
+text = "Harmony  Home"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label/Title"]
+method_call_mode = 1
+anims/Title = SubResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[connection signal="pressed" from="Start" to="Start" method="_on_Button_pressed"]
+[connection signal="button_down" from="Quit" to="Quit" method="_on_Quit_button_down"]
