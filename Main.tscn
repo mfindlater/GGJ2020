@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Hugger1.tscn" type="PackedScene" id=2]
@@ -14,10 +14,17 @@
 [ext_resource path="res://Surf1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Hugger2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Hugger3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Room.gd" type="Script" id=15]
+[ext_resource path="res://Nerd3.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Nerd2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Nerd1.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.0
 ambient_light_color = Color( 0.262745, 0.219608, 0.219608, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 9, 2, 9 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -62,30 +69,83 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48069, 7.32619, 12.3415 )
 omni_range = 15.0
 
 [node name="Hugger1" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0921, 2.02069, 10.056 )
-
-[node name="Gamer1" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57626, 1.95693, -18.7858 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0921, 1.72069, -9.944 )
 
 [node name="Hugger2" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -8 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -8 )
 
 [node name="Hugger3" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 17 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.6, 17 )
+
+[node name="Nerd1" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, 9 )
+
+[node name="Nerd2" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.6, 16 )
+
+[node name="Nerd3" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.6, -9 )
+
+[node name="Gamer1" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57626, 1.75693, -10.7858 )
 
 [node name="Gamer4" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.6, 13 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.6, -9 )
 
 [node name="Gamer5" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.6, -12 )
 
-[node name="Surf3" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 12 )
+[node name="Surf1" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.7, 16 )
 
 [node name="Surf2" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, -10 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.6, 8 )
 
-[node name="Surf1" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -16 )
+[node name="Surf3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.7, 12 )
+
+[node name="GamerRoom" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 13 )
+script = ExtResource( 15 )
+room_tag = "Gamer"
+
+[node name="CollisionShape" type="CollisionShape" parent="GamerRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+shape = SubResource( 2 )
+
+[node name="HuggerRoom" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 13 )
+script = ExtResource( 15 )
+room_tag = "Hugger"
+
+[node name="CollisionShape" type="CollisionShape" parent="HuggerRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+shape = SubResource( 2 )
+
+[node name="SurferRoom" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -13 )
+script = ExtResource( 15 )
+room_tag = "Surf"
+
+[node name="CollisionShape" type="CollisionShape" parent="SurferRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+shape = SubResource( 2 )
+
+[node name="NerdRoom" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -13 )
+script = ExtResource( 15 )
+room_tag = "Nerd"
+
+[node name="CollisionShape" type="CollisionShape" parent="NerdRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+shape = SubResource( 2 )
 [connection signal="pick_up" from="Player" to="." method="_on_Player_pick_up"]
 [connection signal="put_down" from="Player" to="." method="_on_Player_put_down"]
+[connection signal="body_entered" from="GamerRoom" to="GamerRoom" method="_on_Room_body_entered"]
+[connection signal="body_exited" from="GamerRoom" to="GamerRoom" method="_on_Room_body_exited"]
+[connection signal="body_entered" from="HuggerRoom" to="HuggerRoom" method="_on_Room_body_entered"]
+[connection signal="body_exited" from="HuggerRoom" to="HuggerRoom" method="_on_Room_body_exited"]
+[connection signal="body_entered" from="SurferRoom" to="SurferRoom" method="_on_Room_body_entered"]
+[connection signal="body_exited" from="SurferRoom" to="SurferRoom" method="_on_Room_body_exited"]
+[connection signal="body_entered" from="NerdRoom" to="NerdRoom" method="_on_Room_body_entered"]
+[connection signal="body_exited" from="NerdRoom" to="NerdRoom" method="_on_Room_body_exited"]

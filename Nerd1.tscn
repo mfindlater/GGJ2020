@@ -3,7 +3,7 @@
 [ext_resource path="res://Music/HarmonyHome - Track 1 - Nerd Orch Kits.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Item/Item.tscn" type="PackedScene" id=2]
 
-[node name="Item" instance=ExtResource( 2 )]
+[node name="Nerd1" instance=ExtResource( 2 )]
 tag = "Nerd"
 
 [node name="Track" parent="." index="3"]
