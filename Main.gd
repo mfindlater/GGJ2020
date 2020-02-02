@@ -1,36 +1,20 @@
 extends Spatial
 
-func _ready():
-	pass
-func _process(delta):
-	pass ##	$DummyItem.global_transform = $Player/ItemPosition.global_transform 
+var held_item
 
 func _physics_process(delta):
 		if $Player.holding_item:
-		   $Item.global_transform = $Player/ItemPosition.global_transform 
-
-func _on_DummyItem_item_enter():
-	$Player.can_pick_up = true
-	
-
-func _on_DummyItem_item_exit():
-	$Player.can_pick_up = false
+		   held_item.global_transform = $Player/ItemPosition.global_transform 
 
 func _on_Player_pick_up():
-	$Player/ItemPosition.add_child($Item)
-	AudioServer.set_bus_mute(2,false)
-	#$Fade.interpolate_property($Nerd2,"volume_db",0, 1, 0.5)
+	$Player/ItemPosition.add_child(held_item)
 
 func _on_Player_put_down():
-	$Player/ItemPosition.remove_child($Item)
-	$Item.translate(Vector3(0,-3,0))
-	#$Fade.interpolate_property($Nerd2,"volume_db",1, 0, 0.5)
-	AudioServer.set_bus_mute(2,true)
-
+	$Player/ItemPosition.remove_child(held_item)
+	held_item.translate(Vector3(0,-3,0))
 
 func _on_Item_item_enter():
 	$Player.can_pick_up = true
-
 
 func _on_Item_item_exit():
 	$Player.can_pick_up = false

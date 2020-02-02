@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HarmonyHome - Track 8 - Gamer Coin.ogg-3e9941cdba2e6afba73d1e38b1ab0745.oggstr"
+
+[deps]
+
+source_file="res://Music/HarmonyHome - Track 8 - Gamer Coin.ogg"
+dest_files=[ "res://.import/HarmonyHome - Track 8 - Gamer Coin.ogg-3e9941cdba2e6afba73d1e38b1ab0745.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

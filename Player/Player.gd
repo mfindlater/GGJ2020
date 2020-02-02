@@ -2,15 +2,10 @@ extends KinematicBody
 
 
 signal pick_up
-
 signal put_down
 
 var can_pick_up = false
 var holding_item = false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 export var speed = 100
 

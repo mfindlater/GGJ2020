@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HarmonyHome - Track 2 - Nerd Harpsichord.ogg-ee4b1b86f15713f1ef2bc41f17008d56.oggstr"
+
+[deps]
+
+source_file="res://Music/HarmonyHome - Track 2 - Nerd Harpsichord.ogg"
+dest_files=[ "res://.import/HarmonyHome - Track 2 - Nerd Harpsichord.ogg-ee4b1b86f15713f1ef2bc41f17008d56.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

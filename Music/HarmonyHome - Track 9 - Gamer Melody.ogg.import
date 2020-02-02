@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HarmonyHome - Track 9 - Gamer Melody.ogg-a3317b4a387a0809d6f16137594e9d5b.oggstr"
+
+[deps]
+
+source_file="res://Music/HarmonyHome - Track 9 - Gamer Melody.ogg"
+dest_files=[ "res://.import/HarmonyHome - Track 9 - Gamer Melody.ogg-a3317b4a387a0809d6f16137594e9d5b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

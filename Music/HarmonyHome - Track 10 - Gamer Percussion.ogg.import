@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HarmonyHome - Track 10 - Gamer Percussion.ogg-af65e8a8c9fe1744a4a2bffbba8ef93d.oggstr"
+
+[deps]
+
+source_file="res://Music/HarmonyHome - Track 10 - Gamer Percussion.ogg"
+dest_files=[ "res://.import/HarmonyHome - Track 10 - Gamer Percussion.ogg-af65e8a8c9fe1744a4a2bffbba8ef93d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
