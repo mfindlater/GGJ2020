@@ -4,8 +4,11 @@
 
 [node name="Mom" instance=ExtResource( 1 )]
 
+[node name="Skeleton" parent="Armature" index="0"]
+bones/3/bound_children = [ NodePath("BoneAttachment"), NodePath("BoneAttachment 2") ]
+
 [node name="BoneAttachment" parent="Armature/Skeleton" index="0"]
-transform = Transform( 1, 4.52032e-10, 1.11838e-10, 7.45058e-09, 0.999814, -0.019256, -2.98023e-08, 0.0192561, 0.999814, 4.19095e-10, 1.06629, 0.367667 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0.1 )
 
 [node name="BoneAttachment 2" parent="Armature/Skeleton" index="1"]
-transform = Transform( 1, 4.52032e-10, 1.11838e-10, 7.45058e-09, 0.999814, -0.019256, -2.98023e-08, 0.0192561, 0.999814, 4.19095e-10, 1.06629, 0.367667 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0.1 )
