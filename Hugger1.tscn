@@ -8,3 +8,4 @@ tag = "Hugger"
 
 [node name="Track" parent="." index="3"]
 stream = ExtResource( 1 )
+bus = "MusicAmbient"
