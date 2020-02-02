@@ -8,6 +8,8 @@ var player
 var can_be_picked_up = false
 var main
 
+export var tag = ""
+
 func _ready():
 	player = get_parent().get_node("Player")
 	main = get_parent()
@@ -20,6 +22,8 @@ func _ready():
 	yield(get_tree().create_timer(0.5,false),"timeout")
 	can_be_picked_up = false
 	emit_signal("item_exit")
+	
+	set_meta("tag",tag)
 
 func _on_Area_body_entered(body):
 	emit_signal("item_enter")

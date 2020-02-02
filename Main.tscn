@@ -1,11 +1,19 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Hugger1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameQuit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://BusBox.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Item/Item.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Gamer1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Batch1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Gamer5.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Surf3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Gamer4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Surf2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Surf1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Hugger2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Hugger3.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.0
@@ -25,9 +33,6 @@ speed = 10
 
 [node name="BusBox" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1847, 1.41406, 0 )
-
-[node name="Item" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78715, 1.50807, 1.64861 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
@@ -55,7 +60,32 @@ omni_range = 15.0
 [node name="OmniLight6" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48069, 7.32619, 12.3415 )
 omni_range = 15.0
+
+[node name="Hugger1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0921, 2.02069, 10.056 )
+
+[node name="Gamer1" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57626, 1.95693, -18.7858 )
+
+[node name="Hugger2" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -8 )
+
+[node name="Hugger3" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 17 )
+
+[node name="Gamer4" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.6, 13 )
+
+[node name="Gamer5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.6, -12 )
+
+[node name="Surf3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 12 )
+
+[node name="Surf2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, -10 )
+
+[node name="Surf1" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -16 )
 [connection signal="pick_up" from="Player" to="." method="_on_Player_pick_up"]
 [connection signal="put_down" from="Player" to="." method="_on_Player_put_down"]
-[connection signal="item_enter" from="Item" to="." method="_on_Item_item_enter"]
-[connection signal="item_exit" from="Item" to="." method="_on_Item_item_exit"]

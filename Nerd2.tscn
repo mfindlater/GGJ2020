@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Music/HarmonyHome - Track 4 - Hugger Percussion.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Music/HarmonyHome - Track 2 - Nerd Harpsichord.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Item/Item.tscn" type="PackedScene" id=2]
 
-[node name="Hugger1" instance=ExtResource( 2 )]
-tag = "Hugger"
+[node name="Item" instance=ExtResource( 2 )]
+tag = "Nerd"
 
 [node name="Track" parent="." index="3"]
 stream = ExtResource( 1 )
