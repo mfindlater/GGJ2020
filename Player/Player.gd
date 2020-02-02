@@ -72,6 +72,7 @@ func _process(delta):
 	elif Input.is_action_just_pressed("ui_accept") and holding_item:
 		emit_signal("put_down")
 		holding_item = false
+		can_pick_up = true
 		print("Put Down")
 	
 

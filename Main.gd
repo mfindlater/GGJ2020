@@ -9,14 +9,15 @@ export var room_clear_goal = 4
 var rooms_cleared = []
 
 func _physics_process(delta):
-		if $Player.holding_item:
+		if $Player.holding_item and held_item:
 		   held_item.global_transform = $Player/ItemPosition.global_transform 
 
 func _on_Player_pick_up():
 	pass
 
 func _on_Player_put_down():
-	held_item.translate(Vector3(0,-2.4,0))
+	if held_item:
+		held_item.translate(Vector3(0,-3.0,0))
 
 func _on_Item_item_enter(item_name):
 	$Player.can_pick_up = true
