@@ -29,13 +29,13 @@ func _ready():
 	$Track.bus = "MusicAmbient"
 
 func _on_Area_body_entered(body):
-	emit_signal("item_enter")
+	emit_signal("item_enter",name)
 	can_be_picked_up = true
 	print("entered")
 
 	
 func _on_Area_body_exited(body):
-	emit_signal("item_exit")
+	emit_signal("item_exit",name)
 	can_be_picked_up = false
 	print("exited")
 	

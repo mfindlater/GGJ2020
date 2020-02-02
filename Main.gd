@@ -18,11 +18,13 @@ func _on_Player_pick_up():
 func _on_Player_put_down():
 	held_item.translate(Vector3(0,-2.4,0))
 
-func _on_Item_item_enter():
+func _on_Item_item_enter(item_name):
 	$Player.can_pick_up = true
+	print("item: " + item_name)
 
-func _on_Item_item_exit():
+func _on_Item_item_exit(item_name):
 	$Player.can_pick_up = false
+	print("item: " + item_name)
 	
 func _on_Room_clear(room_tag):
 	if rooms_cleared.has(room_tag) == false:
