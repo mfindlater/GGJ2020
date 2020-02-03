@@ -7,29 +7,28 @@
 [ext_resource path="res://MainMenu.gd" type="Script" id=5]
 [ext_resource path="res://Montserrat-Medium.ttf" type="DynamicFontData" id=6]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.27451, 0.176471, 0.176471, 1 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 70
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
-
 [sub_resource type="DynamicFont" id=3]
+
+[sub_resource type="DynamicFont" id=4]
 size = 100
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=4]
-resource_name = "Title"
+[sub_resource type="Animation" id=5]
 length = 2.5
 loop = true
 tracks/0/type = "value"
@@ -83,8 +82,8 @@ margin_top = 1.98584
 margin_right = 200.0
 margin_bottom = 181.986
 rect_scale = Vector2( 0.004, 0.003 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Start"
 script = ExtResource( 1 )
 __meta__ = {
@@ -97,7 +96,7 @@ margin_top = 0.463535
 margin_right = 64.1346
 margin_bottom = 14.4635
 rect_scale = Vector2( 0.0571061, 0.0473607 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Main Menu"
 align = 1
 __meta__ = {
@@ -113,7 +112,7 @@ margin_bottom = 200.028
 rect_scale = Vector2( 0.109, 0.128 )
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Harmony  Home"
 valign = 1
 __meta__ = {
@@ -122,7 +121,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label/Title"]
 method_call_mode = 1
-anims/Title = SubResource( 4 )
+anims/Title = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
