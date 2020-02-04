@@ -22,7 +22,7 @@ func _ready():
 	
 	yield(get_tree().create_timer(0.5,false),"timeout")
 	can_be_picked_up = false
-	emit_signal("item_exit")
+	emit_signal("item_exit",name)
 	
 	set_meta("tag",tag)
 	

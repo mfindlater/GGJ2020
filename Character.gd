@@ -4,6 +4,9 @@ export var tag = ""
 
 var anim = "IdleLoop"
 
+func _ready():
+	add_to_group("kids")
+
 func _process(delta):
 	$Model/AnimationPlayer.current_animation = anim
 

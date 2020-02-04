@@ -7,6 +7,7 @@ var held_item
 var room_clear_amount = 0
 export var room_clear_goal = 4
 var rooms_cleared = []
+var current_item_name = ""
 
 func _physics_process(delta):
 		if $Player.holding_item and held_item:
@@ -21,6 +22,7 @@ func _on_Player_put_down():
 
 func _on_Item_item_enter(item_name):
 	$Player.can_pick_up = true
+	current_item_name = item_name
 	print("item: " + item_name)
 
 func _on_Item_item_exit(item_name):

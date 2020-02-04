@@ -5,24 +5,30 @@
 [ext_resource path="res://white_box_png_1505597.png" type="Texture" id=3]
 [ext_resource path="res://Montserrat-Medium.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="ImageTexture" id=2]
+[sub_resource type="ImageTexture" id=1]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 200
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 19
 font_data = ExtResource( 4 )
 
-[node name="CreditsCanvas" type="CanvasLayer"]
+[node name="CreditsCanvas" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 modulate = Color( 0.00784314, 0.00392157, 0.00392157, 1 )
 margin_right = 1032.0
 margin_bottom = 603.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -37,7 +43,7 @@ margin_left = 243.169
 margin_right = 1264.17
 margin_bottom = 385.0
 rect_scale = Vector2( 0.838, 0.518 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
@@ -47,11 +53,11 @@ __meta__ = {
 }
 
 [node name="TeamMemberNames" type="Label" parent="."]
-margin_left = 185.419
-margin_top = 170.047
-margin_right = 811.419
-margin_bottom = 779.047
-custom_fonts/font = SubResource( 4 )
+margin_left = 187.635
+margin_top = 170.0
+margin_right = 813.635
+margin_bottom = 779.0
+custom_fonts/font = SubResource( 3 )
 text = "Artists/Animators:
 Christian Sanchez
 Robert Scales
@@ -66,6 +72,21 @@ Du-Marc Mills
 Programmers:
 Matt Findlater
 Connor Hughes
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamMemberNames2" type="Label" parent="."]
+margin_left = 442.483
+margin_top = 170.0
+margin_right = 1068.48
+margin_bottom = 779.0
+custom_fonts/font = SubResource( 3 )
+text = "Musicians:
+Andrew Davis (Sloopygoop)
+Michael Hudak
 "
 align = 1
 __meta__ = {

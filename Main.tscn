@@ -153,22 +153,31 @@ shape = SubResource( 2 )
 
 [node name="TreeHugger" parent="." instance=ExtResource( 23 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 15, 2, 13 )
+tag = "Hugger"
 
 [node name="Gamer" parent="." instance=ExtResource( 21 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -3, 2, 13 )
+tag = "Gamer"
 
 [node name="Nerd" parent="." instance=ExtResource( 24 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -3.3, 2, -16.3 )
+tag = "Nerd"
 
 [node name="Surfer" parent="." instance=ExtResource( 22 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 16, 2, -12 )
+tag = "Surf"
+[connection signal="game_over" from="." to="CreditsCanvas" method="_on_Main_game_over"]
 [connection signal="pick_up" from="Player" to="." method="_on_Player_pick_up"]
 [connection signal="put_down" from="Player" to="." method="_on_Player_put_down"]
 [connection signal="body_entered" from="GamerRoom" to="GamerRoom" method="_on_Room_body_entered"]
 [connection signal="body_exited" from="GamerRoom" to="GamerRoom" method="_on_Room_body_exited"]
+[connection signal="clear" from="GamerRoom" to="Gamer" method="_on_CharacterRoom_cleared"]
 [connection signal="body_entered" from="HuggerRoom" to="HuggerRoom" method="_on_Room_body_entered"]
 [connection signal="body_exited" from="HuggerRoom" to="HuggerRoom" method="_on_Room_body_exited"]
+[connection signal="clear" from="HuggerRoom" to="TreeHugger" method="_on_CharacterRoom_cleared"]
 [connection signal="body_entered" from="SurferRoom" to="SurferRoom" method="_on_Room_body_entered"]
 [connection signal="body_exited" from="SurferRoom" to="SurferRoom" method="_on_Room_body_exited"]
+[connection signal="clear" from="SurferRoom" to="Surfer" method="_on_CharacterRoom_cleared"]
 [connection signal="body_entered" from="NerdRoom" to="NerdRoom" method="_on_Room_body_entered"]
 [connection signal="body_exited" from="NerdRoom" to="NerdRoom" method="_on_Room_body_exited"]
+[connection signal="clear" from="NerdRoom" to="Nerd" method="_on_CharacterRoom_cleared"]
