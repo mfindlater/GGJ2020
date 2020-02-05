@@ -49,30 +49,36 @@ environment = SubResource( 1 )
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.12572, 3.59528, 0 )
 light_color = Color( 0.972549, 0.682353, 0.376471, 1 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="OmniLight2" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48891, 2.91652, 0 )
 light_color = Color( 0.972549, 0.682353, 0.376471, 1 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="OmniLight3" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48891, 7.32619, 13.0276 )
 light_color = Color( 0.972549, 0.682353, 0.376471, 1 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="OmniLight4" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.12002, 7.32619, -12.6906 )
 light_color = Color( 0.972549, 0.682353, 0.376471, 1 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="OmniLight5" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5625, 6.64534, -12.6906 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="OmniLight6" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48069, 7.32619, 12.3415 )
 light_color = Color( 0.180392, 0.831373, 0.878431, 1 )
+light_specular = 0.0
 omni_range = 15.0
 
 [node name="Hugger1" parent="." instance=ExtResource( 2 )]
