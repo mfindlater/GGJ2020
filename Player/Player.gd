@@ -10,7 +10,8 @@ var holding_item = false
 export var speed = 100
 
 
-	
+func _ready():
+	set_meta("player",true)
 
 func _process(delta):
 	var velocity = Vector3()
