@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Title Screen.png" type="Texture" id=1]
-[ext_resource path="res://Music/menu.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music/mom-harmony.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Menu.gd" type="Script" id=3]
 
 [node name="Menu" type="Control"]
@@ -27,7 +27,6 @@ __meta__ = {
 
 [node name="MenuTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -40.0
 autoplay = true
 
 [node name="Tween" type="Tween" parent="."]

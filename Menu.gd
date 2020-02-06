@@ -8,7 +8,7 @@ var exiting = false
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") and not exiting:
-		tween.interpolate_property(stream, "volume_db",-40, -80,1,1, Tween.EASE_IN)
+		tween.interpolate_property(stream, "volume_db",0, -80,1,1, Tween.EASE_IN)
 		tween.start()
 		exiting = true
 
